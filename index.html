@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siri Chandana Ravirala — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Fira+Code:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── SCANLINE OVERLAY ─── -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ─── CURSOR GLOW ─── -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-bracket">[</span>SC<span class="nav__logo-bracket">]</span>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#skills" class="nav__link">Skills</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#certs" class="nav__link">Certs</a></li>
+      <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <canvas class="hero__particles" id="particleCanvas"></canvas>
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__label">
+        <span class="hero__label-dot"></span>
+        <span id="typingLabel"></span><span class="cursor">|</span>
+      </p>
+      <h1 class="hero__name" id="heroName">
+        <span class="glitch" data-text="Siri Chandana">Siri Chandana</span><br/>
+        <span class="glitch hero__name--last" data-text="Ravirala">Ravirala</span>
+      </h1>
+      <p class="hero__tagline">Aspiring Web Developer &amp; Python Enthusiast</p>
+      <p class="hero__intro">I build responsive websites and intelligent Python-based applications.<br class="break-sm"/> Passionate about turning ideas into real-world digital solutions.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">01 /</span>
+        <h2 class="section__title">About Me</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__avatar-wrap">
+          <div class="about__avatar">
+            <div class="about__avatar-inner">
+              <span class="about__avatar-initials">SC</span>
+            </div>
+            <div class="about__avatar-ring about__avatar-ring--1"></div>
+            <div class="about__avatar-ring about__avatar-ring--2"></div>
+            <div class="about__avatar-ring about__avatar-ring--3"></div>
+          </div>
+          <div class="about__status">
+            <span class="about__status-dot"></span>
+            Open to opportunities
+          </div>
+        </div>
+        <div class="about__text">
+          <p>I am a motivated <span class="highlight">Information Technology student</span> with strong foundations in Python, web development, and problem solving. I enjoy building real-world projects that combine software development and machine learning to create practical solutions.</p>
+          <p>With hands-on experience in <span class="highlight">OpenCV</span>, <span class="highlight">Machine Learning</span>, and full-stack fundamentals, I am actively seeking opportunities to contribute to real development teams and grow as a professional developer.</p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num">2+</span>
+              <span class="stat__label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">3</span>
+              <span class="stat__label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">5+</span>
+              <span class="stat__label">Tech Stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">02 /</span>
+        <h2 class="section__title">Skills</h2>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-card" data-delay="0">
+          <div class="skill-card__icon">⌨</div>
+          <h3 class="skill-card__title">Languages</h3>
+          <ul class="skill-card__list">
+            <li><span class="pill">Python</span></li>
+            <li><span class="pill">JavaScript</span></li>
+            <li><span class="pill">HTML</span></li>
+            <li><span class="pill">CSS</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-card__icon">⚙</div>
+          <h3 class="skill-card__title">Tools & Tech</h3>
+          <ul class="skill-card__list">
+            <li><span class="pill">MySQL</span></li>
+            <li><span class="pill">Git</span></li>
+            <li><span class="pill">GitHub</span></li>
+            <li><span class="pill">VS Code</span></li>
+            <li><span class="pill">Google Colab</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-card__icon">◈</div>
+          <h3 class="skill-card__title">Core Concepts</h3>
+          <ul class="skill-card__list">
+            <li><span class="pill">Data Structures</span></li>
+            <li><span class="pill">OOP</span></li>
+            <li><span class="pill">Problem Solving</span></li>
+            <li><span class="pill">ML Basics</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">03 /</span>
+        <h2 class="section__title">Projects</h2>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card" data-delay="0">
+          <div class="project-card__top">
+            <span class="project-card__icon">❤</span>
+            <div class="project-card__links">
+              <a href="https://github.com/ravirala-sirichandana" target="_blank" rel="noopener" class="project-card__link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">CardioGuard</h3>
+          <p class="project-card__subtitle">Heart Health Prediction System</p>
+          <p class="project-card__desc">Developed a machine learning model to predict heart disease risk using medical parameters. Implemented data preprocessing and model evaluation techniques to improve prediction accuracy.</p>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-delay="150">
+          <div class="project-card__top">
+            <span class="project-card__icon">🎯</span>
+            <div class="project-card__links">
+              <a href="https://github.com/ravirala-sirichandana" target="_blank" rel="noopener" class="project-card__link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Color Tracker</h3>
+          <p class="project-card__subtitle">Object Detection &amp; Tracking</p>
+          <p class="project-card__desc">Built a real-time object tracking system using OpenCV and webcam input. Implemented HSV filtering and contour detection for accurate color-based object tracking.</p>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">NumPy</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CERTIFICATIONS ─── -->
+  <section class="section certs" id="certs">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">04 /</span>
+        <h2 class="section__title">Certifications</h2>
+      </div>
+      <div class="certs__grid">
+
+        <div class="cert-card" data-delay="0">
+          <div class="cert-card__badge">IBM</div>
+          <div class="cert-card__body">
+            <h3 class="cert-card__title">Artificial Intelligence Fundamentals</h3>
+            <span class="cert-card__issuer">IBM SkillsBuild</span>
+          </div>
+          <div class="cert-card__glow"></div>
+        </div>
+
+        <div class="cert-card" data-delay="100">
+          <div class="cert-card__badge">CISCO</div>
+          <div class="cert-card__body">
+            <h3 class="cert-card__title">Introduction to Data Science</h3>
+            <span class="cert-card__issuer">Cisco Networking Academy</span>
+          </div>
+          <div class="cert-card__glow"></div>
+        </div>
+
+        <div class="cert-card" data-delay="200">
+          <div class="cert-card__badge">TEK</div>
+          <div class="cert-card__body">
+            <h3 class="cert-card__title">Center of Excellence Program</h3>
+            <span class="cert-card__issuer">TekWorks</span>
+          </div>
+          <div class="cert-card__glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESUME ─── -->
+  <section class="section resume-section" id="resume">
+    <div class="container">
+      <div class="resume-cta">
+        <div class="resume-cta__text">
+          <p class="resume-cta__label">// ready to collaborate?</p>
+          <h2 class="resume-cta__heading">Download My Resume</h2>
+          <p class="resume-cta__sub">Get a full overview of my skills, projects, and experience.</p>
+        </div>
+        <a href="resume.pdf" class="btn btn--primary btn--lg" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3M6 9l6 6 6-6M3 21h18"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">05 /</span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <p class="contact__intro">Have a project in mind or just want to say hi? My inbox is always open.</p>
+      <div class="contact__grid">
+
+        <a href="mailto:sirichandanaravirala3@gmail.com" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" width="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-card__label">Email</p>
+            <p class="contact-card__value">sirichandanaravirala3@gmail.com</p>
+          </div>
+          <span class="contact-card__arrow">→</span>
+        </a>
+
+        <a href="https://github.com/ravirala-sirichandana" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div>
+            <p class="contact-card__label">GitHub</p>
+            <p class="contact-card__value">ravirala-sirichandana</p>
+          </div>
+          <span class="contact-card__arrow">→</span>
+        </a>
+
+        <a href="https://linkedin.com/in/siri-chandana-ravirala" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div>
+            <p class="contact-card__label">LinkedIn</p>
+            <p class="contact-card__value">siri-chandana-ravirala</p>
+          </div>
+          <span class="contact-card__arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo"><span class="footer__logo-bracket">[</span>SC<span class="footer__logo-bracket">]</span></span>
+        <p class="footer__copy">© 2026 Siri Chandana Ravirala — Built with ❤ &amp; code</p>
+        <p class="footer__made">Designed &amp; Developed by Siri Chandana</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
