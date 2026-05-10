@@ -1125,3 +1125,22 @@ label {
 .project-btn:hover{
   background: #00bcd4;
 }
+/* Fix project button click issue */
+.project-card {
+  position: relative;
+}
+
+.project-card__buttons {
+  position: relative;
+  z-index: 5;
+}
+
+.project-card__link {
+  position: relative;
+  z-index: 6;
+}
+
+.project-btn {
+  position: relative;
+  z-index: 7;
+}
