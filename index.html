@@ -227,23 +227,36 @@
       </div>
       <div class="certs__grid">
 
-        <div class="cert-card" data-delay="0">
-          <div class="cert-card__badge">IBM</div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">Artificial Intelligence Fundamentals</h3>
-            <span class="cert-card__issuer">IBM SkillsBuild</span>
-          </div>
-          <div class="cert-card__glow"></div>
-        </div>
+        <div class="cert-card" data-delay="0"
+onclick="openCertificate([
+'certificates/ibm1.jpg',
+'certificates/ibm2.jpg',
+'certificates/ibm3.jpg'
+])">
 
-        <div class="cert-card" data-delay="100">
-          <div class="cert-card__badge">CISCO</div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">Introduction to Data Science</h3>
-            <span class="cert-card__issuer">Cisco Networking Academy</span>
-          </div>
-          <div class="cert-card__glow"></div>
-        </div>
+  <div class="cert-card__badge">IBM</div>
+  <div class="cert-card__body">
+    <h3 class="cert-card__title">Artificial Intelligence Fundamentals</h3>
+    <span class="cert-card__issuer">IBM SkillsBuild</span>
+  </div>
+  <div class="cert-card__glow"></div>
+
+</div>
+
+        <div class="cert-card" data-delay="100"
+onclick="openCertificate([
+'certificates/cisco1.jpg',
+'certificates/cisco2.jpg'
+])">
+
+  <div class="cert-card__badge">CISCO</div>
+  <div class="cert-card__body">
+    <h3 class="cert-card__title">Introduction to Data Science</h3>
+    <span class="cert-card__issuer">Cisco Networking Academy</span>
+  </div>
+  <div class="cert-card__glow"></div>
+
+</div>
 
         <div class="cert-card" data-delay="200">
           <div class="cert-card__badge">TEK</div>
@@ -334,5 +347,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- CERTIFICATE MODAL -->
+<div id="certModal" class="cert-modal">
+  <span class="cert-close">&times;</span>
+
+  <img class="cert-modal-img" id="certImage">
+
+  <div class="cert-nav">
+    <button id="prevCert">❮</button>
+    <button id="nextCert">❯</button>
+  </div>
+</div>
 </body>
 </html>

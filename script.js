@@ -203,3 +203,38 @@ document.querySelectorAll('.glitch').forEach(el => {
 console.log('%c[ SIRI CHANDANA RAVIRALA ]', 'color: #00e6a0; font-family: monospace; font-size: 14px; font-weight: bold;');
 console.log('%cAspiring Web Developer & Python Enthusiast', 'color: #00c8ff; font-family: monospace; font-size: 11px;');
 console.log('%c→ github.com/ravirala-sirichandana', 'color: #6b7a9a; font-family: monospace; font-size: 10px;');
+/* ── CERTIFICATE GALLERY ─── */
+
+const certModal = document.getElementById("certModal");
+const certImg   = document.getElementById("certImage");
+const closeBtn  = document.querySelector(".cert-close");
+const prevBtn   = document.getElementById("prevCert");
+const nextBtn   = document.getElementById("nextCert");
+
+let certImages = [];
+let currentCertIndex = 0;
+
+function openCertificate(images){
+  certImages = images;
+  currentCertIndex = 0;
+  certModal.style.display = "flex";
+  certImg.src = certImages[currentCertIndex];
+}
+
+function showNextCert(){
+  currentCertIndex = (currentCertIndex + 1) % certImages.length;
+  certImg.src = certImages[currentCertIndex];
+}
+
+function showPrevCert(){
+  currentCertIndex = (currentCertIndex - 1 + certImages.length) % certImages.length;
+  certImg.src = certImages[currentCertIndex];
+}
+
+nextBtn.addEventListener("click", showNextCert);
+prevBtn.addEventListener("click", showPrevCert);
+
+closeBtn.onclick = () => certModal.style.display = "none";
+window.onclick = (e) => {
+  if(e.target === certModal) certModal.style.display = "none";
+};
