@@ -205,36 +205,37 @@ console.log('%cAspiring Web Developer & Python Enthusiast', 'color: #00c8ff; fon
 console.log('%c→ github.com/ravirala-sirichandana', 'color: #6b7a9a; font-family: monospace; font-size: 10px;');
 /* ── CERTIFICATE GALLERY ─── */
 
-const certModal = document.getElementById("certModal");
-const certImg   = document.getElementById("certImage");
-const closeBtn  = document.querySelector(".cert-close");
-const prevBtn   = document.getElementById("prevCert");
-const nextBtn   = document.getElementById("nextCert");
+const certImages = {
+  0: ["certificates/ibm1.jpg","certificates/ibm2.jpg","certificates/ibm3.jpg"],
+  1: ["certificates/cisco1.jpg","certificates/cisco2.jpg"]
+};
 
-let certImages = [];
-let currentCertIndex = 0;
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("certImage");
+const closeBtn = document.getElementById("certClose");
+const prevBtn = document.getElementById("certPrev");
+const nextBtn = document.getElementById("certNext");
 
-function openCertificate(images){
-  certImages = images;
-  currentCertIndex = 0;
-  certModal.style.display = "flex";
-  certImg.src = certImages[currentCertIndex];
-}
+let currentCert = 0;
+let currentImg = 0;
 
-function showNextCert(){
-  currentCertIndex = (currentCertIndex + 1) % certImages.length;
-  certImg.src = certImages[currentCertIndex];
-}
+document.querySelectorAll(".cert-card").forEach((card,index)=>{
+  card.addEventListener("click",()=>{
+    currentCert = index;
+    currentImg = 0;
+    modal.classList.add("open");
+    modalImg.src = certImages[currentCert][currentImg];
+  });
+});
 
-function showPrevCert(){
-  currentCertIndex = (currentCertIndex - 1 + certImages.length) % certImages.length;
-  certImg.src = certImages[currentCertIndex];
-}
+closeBtn.onclick = ()=> modal.classList.remove("open");
 
-nextBtn.addEventListener("click", showNextCert);
-prevBtn.addEventListener("click", showPrevCert);
+nextBtn.onclick = ()=>{
+  currentImg = (currentImg+1) % certImages[currentCert].length;
+  modalImg.src = certImages[currentCert][currentImg];
+};
 
-closeBtn.onclick = () => certModal.style.display = "none";
-window.onclick = (e) => {
-  if(e.target === certModal) certModal.style.display = "none";
+prevBtn.onclick = ()=>{
+  currentImg = (currentImg-1+certImages[currentCert].length) % certImages[currentCert].length;
+  modalImg.src = certImages[currentCert][currentImg];
 };
